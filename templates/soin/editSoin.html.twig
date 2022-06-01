@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+{% block title %}Modifier un soin{% endblock %}
+
+{% block body %}
+
+
+ <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+             <nav class="navbar navbar-light bg-light">
+        <form class="form-inline">
+     </form>
+    </nav>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Modifier un soin</li>
+             
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+  <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Quick Example</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+            
+                <div class="card-body">
+                  <div class="form-group">
+                    <label >Désignation</label><br>
+                      {{ form_start(form, {'attr':{'novalidate':'novalidate'}}) }}
+                    {{ form_widget(form.designation,{'attr':{'class': 'form-control'}}) }}
+                    <div class="my-custom-class-for-errors">
+                    {{ form_errors(form.designation) }}
+                  </div>
+                  </div>
+                  
+                  </div>
+
+
+                    
+                <!-- /.card-body -->
+
+               {{form_end(form) }}
+            </div>
+
+
+          <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+            </div>
+
+
+
+            {% endblock %}

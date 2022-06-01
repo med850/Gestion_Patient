@@ -1,0 +1,106 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Gestion des séances{% endblock %}
+
+{% block body %}
+
+
+
+
+
+ <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+             <nav class="navbar navbar-light bg-light">
+        <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Recherche" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>
+     </form>
+
+    </nav>
+    
+ 
+  
+ 
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Liste des séances</li>
+             
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              
+              <!-- /.card-header -->
+              <div class="card-body">
+                <table id="example2" class="table table-bordered table-hover">
+                  <thead>
+                  <tr>
+                    <th>Code seance</th>
+                    <th>Patient</th>
+                    <th>Soin</th>
+                     <th>Action</th>
+
+                  </tr>
+                  </thead>
+                   {% for seance in seances %}
+                  <tbody>
+                  <tr>
+                   <td>{{ seance.id}}</td>
+                   <td>{{ seance.codeP}}</td>
+                   <td>{{ seance.codeSoin}}</td>
+                  
+                
+                 
+                  
+                  </td>
+                   <td><a href="#" class="btn btn-outline-warning">Modifier</a>
+                    <a href="#" class="btn btn-outline-danger">Supprimer</a>
+                   
+                   
+
+
+                  </tr>
+                 
+                  </tbody>
+                  {% endfor %}
+                </table>
+                
+
+              </div>
+
+              <div class="navigation">
+             
+                </div>
+
+              <!-- /.card-body --><section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+            </div>
+            <!-- /.card -->
+
+          
+
+
+
+
+
+{% endblock %}
+

@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+    {% block body %}
+
+
+
+        <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+             <nav class="navbar navbar-light bg-light">
+        <form class="form-inline">
+     </form>
+    </nav>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Ajouter patient</li>
+             
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+        <div>
+
+
+        
+            <!-- jquery validation -->
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 >Ajouter un patient   </h3>
+                    {{ form_start(form,{attr:{novalidate:'novalidate'}}) }}
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+
+                <form id="quickForm" novalidate="novalidate">
+                    <div class="card-body">
+
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Nom de patient</label>
+                            {{ form_widget(form.nomP,{'attr':{'class':'form-control'}}) }}
+                            {{ form_errors(form.nomP,{'attr':{'class':'form-control'}}) }}
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Prenom de patient</label>
+                            {{ form_widget(form.prenomP,{'attr':{'class':'form-control'}}) }}
+                            {{ form_errors(form.prenomP,{'attr':{'class':'form-control'}}) }}
+                        </div>
+
+                    <label for="inputText" class="col-sm-4 col-form-label">Téléphone</label>
+                    <div class="col-sm-6">
+                        {{ form_widget(form.numTel,{'attr':{'class':'form-control'}}) }}
+                        {{ form_errors(form.numTel,{'attr':{'class':'form-control'}}) }}
+
+                    </div>
+
+                    </div>
+                    <!-- /.card-body -->
+                   
+                    {{ form_end(form) }}
+                </form>
+            </div>
+            <!-- /.card -->
+        </div>
+    {% endblock %}

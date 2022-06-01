@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>{% block title %}Inscription | Connexion{% endblock %}</title>
+<head>
+{% block stylesheets %}
+
+ <link rel="stylesheet" href="{{asset("assets/css/loginFormDes.css")}}">
+ 
+{% endblock %}
+
+</head>
+
+<body>
+<img class = "img"src="{{asset("assets/img/dr.png")}}" alt="Logo" height="120" width="120">
+<div id="login-box">
+  <div class="left">
+    <h1>Connexion</h1>
+
+<form method="post">
+   
+    <div class="form-group">
+   
+     <input type="text"  placeholder="E-mail" required name="email" value="{{ last_username }}" id="inputEmail"autocomplete="email"autofocus />
+     </div>
+     <div class="form-group">
+   
+    
+     <input type="password"  placeholder="Mot de passe" required name="password" class="form-control"id="inputPassword"autocomplete="current-password"  />
+     </div>
+    <input type="hidden" name="_csrf_token"
+           value="{{ csrf_token('authenticate') }}"
+    >
+
+
+<div class="form-group">
+    <input type="submit" name="signup_submit" value="Connexion" />
+    </div>
+   
+</form>
+
+{% block javascripts %}
+
+{% endblock %}
+
+
+
+</body>
+
+
+
+</html>
